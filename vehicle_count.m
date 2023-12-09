@@ -121,6 +121,7 @@ set(handles.value, 'String', '');
 set(handles.value2, 'String', '');
 
 
+
 % --- Executes on button press in count.
 function count_Callback(hObject, eventdata, handles)
 % hObject    handle to count (see GCBO)
@@ -133,7 +134,7 @@ function count_Callback(hObject, eventdata, handles)
 L=rgb2gray(I);
 background=imopen(L,strel('disk',50));
 I2=L-background;
-se =strel('ball',15,15);
+se = strel('ball',15,15);
 I2=imerode(L,se);
 I3=imadjust(I2);
 level=graythresh(I3);
